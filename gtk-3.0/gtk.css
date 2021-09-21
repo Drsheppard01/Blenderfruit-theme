@@ -4247,7 +4247,7 @@ progressbar.horizontal progress:not(.pulse):not(:disabled) {
   animation: progress 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
   background-size: cover, 64px 100%;
   background-repeat: no-repeat;
-  background-image: linear-gradient(to bottom, alpha(@progress_bg_color, 0.2), rgba(97, 113, 124, 0)), linear-gradient(to right, rgba(97, 113, 124, 0), #1A73E8 60%, rgba(97, 113, 124, 0));
+  background-image: linear-gradient(to bottom, rgba(26, 115, 232, 0.2), rgba(97, 113, 124, 0)), linear-gradient(to right, rgba(97, 113, 124, 0), #1A73E8 60%, rgba(97, 113, 124, 0));
 }
 
 progressbar.horizontal progress:not(.pulse):not(:disabled).right {
@@ -5894,7 +5894,9 @@ stackswitcher button.text-button.circular {
   padding: 0;
 }
 
-/************* App Icons * */
+/*************
+ * App Icons *
+ *************/
 /* Outline for low res icons */
 .lowres-icon {
   -gtk-icon-shadow: 0 -1px rgba(0, 0, 0, 0.05), 1px 0 rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.1);
@@ -5905,7 +5907,9 @@ stackswitcher button.text-button.circular {
   -gtk-icon-shadow: 0 1px 12px rgba(0, 0, 0, 0.05), 0 -1px rgba(0, 0, 0, 0.05), 1px 0 rgba(0, 0, 0, 0.1), 0 1px rgba(0, 0, 0, 0.3), -1px 0 rgba(0, 0, 0, 0.1);
 }
 
-/********* Emoji * */
+/*********
+ * Emoji *
+ *********/
 popover.emoji-picker {
   padding-left: 0;
   padding-right: 0;
@@ -6088,7 +6092,9 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
   margin-bottom: 4px;
 }
 
-/************ Nautilus * */
+/************
+ * Nautilus *
+ ************/
 
 .nautilus-window popover.background {
   background-color: rgba(240, 240, 240, 0.8);
@@ -6097,9 +6103,8 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
 .nautilus-window .floating-bar {
   min-height: 32px;
   padding: 0;
-  border-radius: 10px 10px 0 0;
-  background-color: white;
-  background-clip: padding-box;
+  border-radius: 18px;
+  background-color: rgba(242, 242, 242, 0.95);
 }
 
 .nautilus-window .floating-bar.bottom.left {
@@ -6119,8 +6124,8 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
 }
 
 .nautilus-window .nautilus-list-view {
-  background-image: url("assets/Zorin_OS.png"); 
-  border-radius: 0 0 10px 10px;
+  background-color: transparent;
+  border-radius: 18px;
   }
 
   .nautilus-window .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) {
@@ -6129,27 +6134,28 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
   }
 
   .nautilus-window.maximized .floating-bar, .nautilus-window.maximized .nautilus-list-view, .nautilus-window.tiled .floating-bar, .nautilus-window.tiled .nautilus-list-view, .nautilus-window.fullscreen .floating-bar, .nautilus-window.fullscreen .nautilus-list-view {
-    border-bottom-right-radius: 0; border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; 
+    border-bottom-left-radius: 0;
   }
 
   .nautilus-window headerbar .path-bar-box {
-    color: transparent; background: none;
+    color: transparent; 
+    background: none;
   }
 
   .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:last-child {
-    color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #606264; background: linear-gradient(65deg, #206dd3, #1A73E8); box-shadow: 0 2px 4px rgba(97, 113, 124, 0.2);
+    color: white; 
+    outline-color: rgba(255, 255, 255, 0.3); 
+    background-color: #606264; 
+    background: linear-gradient(65deg, #206dd3, #1A73E8); 
+    box-shadow: 0 2px 4px rgba(97, 113, 124, 0.2);
   }
 
   .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:last-child:active {
-    color: white; outline-color: rgba(255, 255, 255, 0.3); background-color: #606264; box-shadow: 0 2px 4px rgba(96, 98, 100, 0.2);
-  }
-
-  .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:backdrop:last-child {
-    background-color: gray; background-image: none; box-shadow: none;
-  }
-
-  .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:backdrop:last-child label, .nautilus-window headerbar .path-bar-box .linked.nautilus-path-bar > button:backdrop:last-child {
-    color: white;
+    color: white; 
+    outline-color: rgba(255, 255, 255, 0.3); 
+    background-color: #606264; 
+    box-shadow: 0 2px 4px rgba(96, 98, 100, 0.2);
   }
 
   .nautilus-window notebook > header.top:dir(ltr) {
@@ -6160,12 +6166,12 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
     border-top-right-radius: 0;
   }
 
-  .nautilus-canvas-item {
+  .nemo-desktop.nemo-canvas-item, .caja-desktop.caja-canvas-item, .nautilus-canvas-item {
     border-radius: 8px;
   }
 
   .nautilus-canvas-item.dim-label, label.nautilus-canvas-item.separator, headerbar .nautilus-canvas-item.subtitle, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle, popover.background label.nautilus-canvas-item.separator, .nautilus-list-dim-label {
-    color: #868686;
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .nautilus-canvas-item.dim-label:backdrop, label.nautilus-canvas-item.separator:backdrop, headerbar .nautilus-canvas-item.subtitle:backdrop, .titlebar:not(headerbar) .nautilus-canvas-item.subtitle:backdrop, popover.background label.nautilus-canvas-item.separator:backdrop, .nautilus-list-dim-label:backdrop {
@@ -6181,15 +6187,18 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
   }
 
   .disk-space-display.unknown {
-    background-color: rgba(41, 41, 42, 0.4); color: rgba(41, 41, 42, 0.4);
+    background-color: rgba(0, 0, 0, 0.48); 
+    color: rgba(0, 0, 0, 0.48);
   }
 
   .disk-space-display.used {
-    background-color: #606264; color: #606264;
+    background-color: #1A73E8; 
+    color: #1A73E8;
   }
 
   .disk-space-display.free {
-    background-color: rgba(41, 41, 42, 0.1); color: rgba(41, 41, 42, 0.1);
+    background-color: rgba(0, 0, 0, 0.12); 
+    color: rgba(0, 0, 0, 0.12);
   }
 
   dialog > box > grid > scrolledwindow > viewport > box > list {
@@ -6208,39 +6217,60 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
     margin: 0;
   }
 
-  /*********************** LightDM Gtk Greeter * */
-  .lightdm-gtk-greeter #panel_window {
-    border-radius: 0; border: none;
-  }
+/************************
+ * LightDM GTK+ Greeter *
+ ************************/
+ #panel_window {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
 
-  .lightdm-gtk-greeter #buttonbox_frame {
-    padding-top: 24px;
-  }
+#panel_window menubar,
+#panel_window separator {
+  background-color: transparent;
+}
 
-  /**************************************************** documents-scrolledwin (Totem, Documents, EvView) * */
-  .documents-scrolledwin:backdrop, .documents-scrolledwin {
-    background-color: transparent;
-  }
+#panel_window separator {
+  padding: 0 4px;
+}
 
-  .documents-scrolledwin:backdrop .content-view:not(:selected):not(:hover):backdrop, .documents-scrolledwin:backdrop .content-view:not(:selected):not(:hover), .documents-scrolledwin .content-view:not(:selected):not(:hover):backdrop, .documents-scrolledwin .content-view:not(:selected):not(:hover) {
-    background-color: transparent;
-  }
+#panel_window separator:first-child {
+  padding: 0 8px;
+}
 
-  .documents-scrolledwin:backdrop .content-view:hover, .documents-scrolledwin .content-view:hover {
-    background-color: rgba(41, 41, 42, 0.075);
-  }
+#panel_window menubar>menuitem {
+  color: rgba(255, 255, 255, 0.7);
+}
 
-  .documents-scrolledwin:backdrop viewport.frame, .documents-scrolledwin viewport.frame {
-    background-color: transparent;
-  }
+#panel_window menubar>menuitem:hover {
+  color: white;
+}
 
-  .documents-scrolledwin:backdrop viewport.frame widget > frame.content-view:not(:selected):not(:hover), .documents-scrolledwin viewport.frame widget > frame.content-view:not(:selected):not(:hover) {
-    background-color: transparent;
-  }
+#panel_window menubar>menuitem:disabled label {
+  color: rgba(255, 255, 255, 0.3);
+}
 
-  .documents-scrolledwin:backdrop viewport.frame widget > frame.content-view:not(:selected):not(:hover) border, .documents-scrolledwin viewport.frame widget > frame.content-view:not(:selected):not(:hover) border {
-    border: none;
-  }
+#login_window,
+#shutdown_dialog,
+#restart_dialog {
+  margin: 8px;
+  border-radius: 12px;
+  box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+  background-color: #FFFFFF;
+}
+
+#content_frame {
+  padding-bottom: 16px;
+}
+
+#buttonbox_frame {
+  padding-top: 24px;
+}
+
+#buttonbox_frame>box,
+#buttonbox_frame>buttonbox {
+  margin: -16px;
+}
 
   /******************* Document Viewer * */
   window.background.csd > box.vertical > scrolledwindow > iconview.view.content-view:not(:hover):not(:selected), window.background.csd > box.vertical > scrolledwindow > iconview.content-view:not(:hover):not(:selected) {
@@ -6329,7 +6359,9 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
     background-color: white;
   }
 
-  /********* Gedit * */
+ /*********
+ * gedit *
+ *********/
   window.org-gnome-gedit stack scrolledwindow viewport.frame list.gedit-document-panel {
     background-color: transparent;
   }
@@ -6613,8 +6645,8 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
   }
 
   /******************
- * Budgie Desktop *
- ******************/
+  * Budgie Desktop *
+  ******************/
   .budgie-container {
     background-color: transparent;
   }
