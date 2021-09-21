@@ -3200,7 +3200,7 @@ switch {
 }
 
 switch:checked {
-  background-color: #rgba(26, 115, 232, 0.5);
+  background-color: rgba(26, 115, 232, 0.5);
   background: linear-gradient(65deg, #206dd3, #1A73E8);
 }
 
@@ -6119,7 +6119,8 @@ window.background:not(.solid-csd)>notebook:not(.frame) tab {
 }
 
 .nautilus-window .nautilus-list-view {
-  background-image: url("assets/Zorin_OS.png"; border-radius: 0 0 10px 10px;
+  background-image: url("assets/Zorin_OS.png"); 
+  border-radius: 0 0 10px 10px;
   }
 
   .nautilus-window .nautilus-list-view treeview.view:not(:hover):not(:active):not(:selected) {
