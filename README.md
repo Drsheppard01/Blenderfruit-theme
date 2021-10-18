@@ -8,7 +8,7 @@ Pretty theme for Linux Desktops
 
 Need help: 
 
-- [ ] Left bottom corner from Nautilus (need make round)
-- [ ] Delete all blur (#FFFFFF for the main area and #F5F5F5 for sidebar)
+- [x] Left bottom corner from Nautilus (need make round)
+- [x] Delete all blur (#FFFFFF for the main area and #F5F5F5 for sidebar)
 - [ ] recolored "Show Desktop" applet in white
-- [ ] Make non-active elements less visible 
+- [x] Make non-active elements less visible 
