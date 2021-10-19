@@ -5,9 +5,11 @@ Blenderfruit theme for Linux Desktops (GNOME, Budgie, XFCE)
 - recolored path-bar-box
 - added support budgie-desktop
 - changed panels (like Orchis)
+- Delete all blur (#FFFFFF for the main area and #F5F5F5 for sidebar)
 
 Need help: 
 
-- [x] Left bottom corner from Nautilus (need make round)
-- [x] Delete all blur (#FFFFFF for the main area and #F5F5F5 for sidebar)
-- [ ] recolored "Show Desktop" applet in bright theme on transparent
+
+- [ ] Recolored "Show Desktop" applet in bright theme on transparent
+- [ ] Dark theme (e.g. Raven issues, Nautilus bright, other windows bright)
+- [ ] Change Buttons
