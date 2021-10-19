@@ -1,4 +1,4 @@
-# pretty-theme
+# Blenderfruit (v2)
 Pretty theme for Linux Desktops
 
 - recolored Headerbars
