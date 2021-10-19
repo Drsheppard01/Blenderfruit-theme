@@ -955,7 +955,7 @@ button.suggested-action:checked {
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   background-image: none;
-  background-color: #1A73E8;
+  background-color: #494949;
   box-shadow: 0 2px 4px rgba(96, 98, 100, 0.2);
 }
 
@@ -1297,8 +1297,8 @@ button.font>box>box>label {
 }
 
 button.circular {
-  border-radius: 999px;
-  -gtk-outline-radius: 999px;
+  border-radius: 9999px;
+  -gtk-outline-radius: 9999px;
 }
 
 button.circular label {
@@ -1314,7 +1314,7 @@ stackswitcher>button.needs-attention>image {
   background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#1A73E8), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.769231)), to(transparent));
   background-size: 6px 6px, 6px 6px;
   background-repeat: no-repeat;
-  background-position: right 3px, right 4px;
+  background-position: right 3px, right 2px;
 }
 
 stacksidebar row.needs-attention>label:backdrop,
@@ -1330,7 +1330,7 @@ stacksidebar row.needs-attention>label:dir(rtl),
 .stack-switcher>button.needs-attention>image:dir(rtl),
 stackswitcher>button.needs-attention>label:dir(rtl),
 stackswitcher>button.needs-attention>image:dir(rtl) {
-  background-position: left 3px, left 4px;
+  background-position: left 3px, left 2px;
 }
 
 .inline-toolbar toolbutton>button {
@@ -2332,7 +2332,7 @@ headerbar.windowhandle viewswitchertitle>squeezer>viewswitcher>box.horizontal>bu
 treeview.view {
   border-left-color: rgba(41, 41, 42, 0.15);
   border-top-color: #F2F2F2;
-  border-radius: 0;
+  border-radius: 0px;
 }
 
 * {
@@ -2559,7 +2559,7 @@ treeview.view header button:last-child {
 menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
-  padding: 0;
+  padding: 0px;
   background-color: #0F0F0F;
   color: #FFFFFF;
 }
@@ -2609,8 +2609,8 @@ menubar .csd.popup decoration,
 menu,
 .menu,
 .context-menu {
-  margin: 8px 0;
-  padding: 8px 0;
+  margin: 8px;
+  padding: 8px 0px;
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -2719,9 +2719,10 @@ menu>arrow,
 menu>arrow.top,
 .menu>arrow.top,
 .context-menu>arrow.top {
-  margin-top: -4px;
+  margin-top: -8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 12px 12px 0 0;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
@@ -2844,6 +2845,7 @@ menu menuitem radio:indeterminate {
 /************
  * Popovers *
  ************/
+
 popover.background {
   padding: 2px;
   background-color: #FFFFFF;
@@ -2870,7 +2872,7 @@ popover.background>.view,
 popover.background>iconview,
 popover.background>toolbar {
   border-style: none;
-  background-color: #FFFFFF;
+  background-color: transparent;
 }
 
 popover.background separator {
@@ -3019,11 +3021,15 @@ notebook>stack:not(:only-child) {
   border-radius: 12px;
 }
 
+notebook>stack:not(:only-child):backdrop {
+  background-color: transparent;
+}
+
 /**************
  * Scrollbars *
  **************/
 scrollbar {
-  background-color: #FFFFFF;
+  background-color: transparent;
   transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-radius: 8px;
 }
@@ -3031,6 +3037,11 @@ scrollbar {
 * {
   -GtkScrollbar-has-backward-stepper: false;
   -GtkScrollbar-has-forward-stepper: false;
+}
+
+scrollbar:backdrop {
+  border-color: #2d2d2d;
+  transition: 150ms ease-out;
 }
 
 scrollbar slider {
@@ -4234,7 +4245,6 @@ progressbar.osd trough {
 progressbar.osd progress {
   border-style: none;
   border-radius: 0;
-  background-color: #1A73E8;
 }
 
 progressbar trough.empty progress {
@@ -4629,6 +4639,7 @@ row.activatable {
 treeview.view header button:hover,
 window#gnome-system-monitor.background.csd>box.vertical>stack>box.vertical>scrolledwindow treeview.view:not(.progressbar):not(.trough) header button:hover,
 filechooser stack.view scrolledwindow treeview.view header button:hover,
+row.activatable.has-open-popup,
 row.activatable:hover {
   color: rgba(0, 0, 0, 0.87);
   outline-color: rgba(41, 41, 42, 0.3);
@@ -4741,7 +4752,7 @@ expander title>arrow:dir(rtl) {
   -gtk-icon-transform: rotate(90deg);
 }
 
-expander title>arrow:hover expander title>arrow:active {
+expander title > arrow:hover expander title > arrow:active {
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -4966,7 +4977,7 @@ placessidebar list {
 
 placessidebar row {
   min-height: 36px;
-  padding: 0;
+  padding: 0px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -5352,6 +5363,7 @@ infobar.error *:link {
 /************
  * Tooltips *
  ************/
+
 tooltip {
   padding: 4px;
   /* not working */
@@ -5856,6 +5868,8 @@ cursor-handle.insertion-cursor:dir(rtl) {
 
 :not(decoration):not(window):drop(active):focus,
 :not(decoration):not(window):drop(active) {
+  border-color: #1A73E8;
+  box-shadow: inset 0 0 0 1px #1A73E8;
   caret-color: #1A73E8;
 }
 
@@ -6023,7 +6037,7 @@ headerbar viewswitcher>box>button:last-child {
  * Firefox *
  ***********/
 
-#MozillaGtkWidget>widget text {
+#MozillaGtkWidget > widget text {
   background-color: #FFFFFF;
 }
 
@@ -6607,7 +6621,7 @@ frame.geary-conversation-frame scrolledwindow treeview.view:selected:backdrop {
 }
 
 /*********
- * gedit *
+ * Gedit *
  *********/
 
 window.org-gnome-gedit stack scrolledwindow viewport.frame list.gedit-document-panel {
@@ -6996,6 +7010,23 @@ wnck-pager:selected {
 
 wnck-pager:hover {
   background-color: alpha(currentColor, 0.08);
+}
+
+XfdesktopIconView.view {
+  background: transparent;
+  color: white;
+}
+
+XfdesktopIconView.view:active {
+  background: #ffffff;
+  color: #191919;
+  text-shadow: none;
+}
+
+XfdesktopIconView.view .label {
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-weight: 600;
 }
 
 /******************
