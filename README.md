@@ -10,5 +10,4 @@ Need help:
 
 - [x] Left bottom corner from Nautilus (need make round)
 - [x] Delete all blur (#FFFFFF for the main area and #F5F5F5 for sidebar)
-- [ ] recolored "Show Desktop" applet in white
-- [x] Make non-active elements less visible 
+- [ ] recolored "Show Desktop" applet in bright theme on transparent
