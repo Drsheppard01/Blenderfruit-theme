@@ -13,3 +13,5 @@ Need help:
 - [ ] Recolored "Show Desktop" applet in bright theme on transparent
 - [ ] Dark theme (e.g. Raven issues, Nautilus bright, other windows bright)
 - [ ] Change Buttons
+
+Support me with PayPal: https://www.paypal.com/paypalme/m3n90z4
