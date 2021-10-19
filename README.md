@@ -1,5 +1,5 @@
 # Blenderfruit (v2)
-Pretty theme for Linux Desktops
+Blenderfruit theme for Linux Desktops (GNOME, Budgie, XFCE)
 
 - recolored Headerbars
 - recolored path-bar-box
