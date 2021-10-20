@@ -6437,9 +6437,9 @@ frame.geary-conversation-frame scrolledwindow treeview.view:selected:backdrop {
   background-color: #151515;
 }
 
-/*********
+/**********
  * Gedit *
- *********/
+**********/
 
 window.org-gnome-gedit stack scrolledwindow viewport.frame list.gedit-document-panel {
   background-color: transparent;
