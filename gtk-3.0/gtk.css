@@ -6499,9 +6499,9 @@ dialog > box > grid > scrolledwindow > viewport > box > list separator.horizonta
   padding-top: 24px;
 }
 
-  /*******************  
-   * Document Viewer *
-  ********************/
+/******************  
+* Document Viewer *
+*******************/
 
 window.background.csd > box.vertical > scrolledwindow > iconview.view.content-view:not(:hover):not(:selected),
 window.background.csd > box.vertical > scrolledwindow > iconview.content-view:not(:hover):not(:selected) {
@@ -6515,7 +6515,7 @@ window.background.csd > box.vertical > paned.horizontal > box.vertical > scrolle
 
 window.background.csd evview.view.content-view {
   background-color: transparent;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 18px 18px;
 }
 
 window.background.csd.maximized > box.vertical > scrolledwindow > iconview.view.content-view:not(:hover):not(:selected),
@@ -6534,8 +6534,8 @@ window.background.csd.fullscreen evview.view.content-view {
 }
 
 /*******************
-  * Archive Manager *
-  *******************/
+* Archive Manager *
+*******************/
 
 .background.csd > grid.horizontal > paned.horizontal > scrolledwindow {
   border-radius: 0 0 10px 10px;
@@ -6614,11 +6614,7 @@ frame.geary-conversation-frame scrolledwindow treeview.view:selected:backdrop {
 }
 
 .geary-attachment-pane > actionbar {
-  background-color: white;
-}
-
-.geary-attachment-pane > actionbar:backdrop {
-  background-color: white;
+  background-color: transparent;
 }
 
 /*********
@@ -6671,14 +6667,14 @@ grid > viewport > box box > textview.view.info-view > text {
 window.background.csd > leaflet > stack.background,
 window.background.csd > hdyleaflet > stack.background,
 window.background.csd > box.horizontal > stack.background {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 window.background.csd > leaflet > box.vertical > scrolledwindow.view,
 window.background.csd > hdyleaflet > box.vertical > scrolledwindow.view,
 window.background.csd > box.horizontal > box.vertical > scrolledwindow.view {
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 12px;
 }
 
 window.background.csd > leaflet > box.vertical > scrolledwindow.view > viewport.frame > stack,
@@ -6893,7 +6889,9 @@ terminal-window .terminal-screen:backdrop {
   color: #7c7c7c;
 }
 
-/*************** Gnome Todo * */
+/*********
+ * To Do *
+ *********/
 
 window.background.csd.org-gnome-Todo > overlay > stack.background > box.horizontal > tasklistview > box.vertical > overlay.view > scrolledwindow > viewport.view,
 window.background.csd.org-gnome-Todo stack.background {
@@ -7014,6 +7012,7 @@ wnck-pager:hover {
 }
 
 XfdesktopIconView.view {
+  border-radius: 12px;
   background: transparent;
   color: white;
 }
@@ -7029,6 +7028,478 @@ XfdesktopIconView.view .label {
   color: white;
   font-weight: 600;
 }
+
+/**************
+ * Mate-Panel *
+ **************/
+ .mate-panel-menu-bar menubar,
+ #PanelApplet-window-menu-applet-button {
+   background-color: transparent;
+ }
+ 
+ .mate-panel-menu-bar {
+   background-color: #1F1F1F;
+   color: rgba(255, 255, 255, 0.7);
+   font-weight: 500;
+ }
+ 
+ .mate-panel-menu-bar button {
+   min-height: 16px;
+   min-width: 16px;
+   padding: 0;
+   border-radius: 0;
+ }
+ 
+ PanelToplevel.horizontal > grid > button {
+   min-width: 24px;
+ }
+ 
+ PanelToplevel.vertical > grid > button {
+   min-height: 24px;
+ }
+ 
+ PanelSeparator {
+   color: rgba(255, 255, 255, 0.12);
+ }
+ 
+ MatePanelAppletFrameDBus {
+   border-style: solid;
+   border-color: rgba(255, 255, 255, 0.12);
+ }
+ 
+ .mate-panel-menu-bar.horizontal MatePanelAppletFrameDBus {
+   border-width: 0 1px;
+ }
+ 
+ .mate-panel-menu-bar.vertical MatePanelAppletFrameDBus {
+   border-width: 1px 0;
+ }
+ 
+ .mate-panel-menu-bar menubar > menuitem {
+   color: rgba(255, 255, 255, 0.7);
+ }
+ 
+ .mate-panel-menu-bar menubar > menuitem:hover {
+   color: white;
+ }
+ 
+ .mate-panel-menu-bar menubar > menuitem:disabled {
+   color: rgba(255, 255, 255, 0.3);
+ }
+ 
+ .mate-panel-menu-bar.horizontal menubar > menuitem {
+   padding: 0 8px;
+ }
+ 
+ .mate-panel-menu-bar.vertical menubar > menuitem {
+   padding: 8px 0;
+ }
+ 
+ .mate-panel-menu-bar menubar menu > menuitem {
+   min-height: 28px;
+   padding: 0 6px;
+ }
+ 
+ .mate-panel-menu-bar #PanelApplet button {
+   -GtkWidget-window-dragging: true;
+ }
+ 
+ .mate-panel-menu-bar #tasklist-button {
+   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 0%, transparent 0%) 0 0 0/0 0 0px;
+ }
+ 
+ .mate-panel-menu-bar #tasklist-button:checked {
+   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 100%, transparent 0%) 0 0 2/0 0 2px;
+ }
+ 
+ .mate-panel-menu-bar #tasklist-button image:dir(ltr), .mate-panel-menu-bar #tasklist-button label:dir(rtl) {
+   padding-left: 4px;
+ }
+ 
+ .mate-panel-menu-bar #tasklist-button label:dir(ltr), .mate-panel-menu-bar #tasklist-button image:dir(rtl) {
+   padding-right: 4px;
+ }
+ 
+ .mate-panel-menu-bar.vertical #tasklist-button {
+   min-height: 32px;
+ }
+ 
+ .mate-panel-menu-bar.horizontal #showdesktop-button image {
+   min-width: 24px;
+   padding: 0 4px;
+ }
+ 
+ .mate-panel-menu-bar.vertical #showdesktop-button image {
+   min-height: 24px;
+   padding: 4px 0;
+ }
+ 
+ PanelApplet.wnck-applet .wnck-pager {
+   background-color: transparent;
+   color: #1A73E8;
+ }
+ 
+ PanelApplet.wnck-applet .wnck-pager:hover {
+   background-color: alpha(currentColor, 0.08);
+ }
+ 
+ PanelApplet.wnck-applet .wnck-pager:active {
+   background-color: alpha(currentColor, 0.12);
+ }
+ 
+ PanelApplet.wnck-applet .wnck-pager:selected {
+   background-color: #1A73E8;
+ }
+ 
+ .mate-panel-menu-bar.horizontal #clock-applet-button label {
+   padding: 0 8px;
+ }
+ 
+ .mate-panel-menu-bar.vertical #clock-applet-button label {
+   padding: 8px 0;
+ }
+ 
+ #MatePanelPopupWindow {
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   border-radius: 13px;
+   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+   background-color: #FFFFFF;
+ }
+ 
+ #MatePanelPopupWindow frame > border {
+   border-style: none;
+ }
+ 
+ #MatePanelPopupWindow calendar {
+   border-style: none;
+ }
+ 
+ #MatePanelPopupWindow calendar:not(:selected) {
+   background-color: transparent;
+ }
+ 
+ #MatePanelPopupWindow calendar + box {
+   margin-top: -5px;
+   padding-top: 5px;
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ #MatePanelPopupWindow expander > title {
+   min-height: 32px;
+ }
+ 
+ #MatePanelPopupWindow button {
+   padding: 4px 16px;
+ }
+ 
+ #MatePanelPopupWindow > frame > box > box > box > widget {
+   color: rgba(0, 0, 0, 0.12);
+ }
+ 
+ na-tray-applet {
+   -NaTrayApplet-icon-padding: 3px;
+   -NaTrayApplet-icon-size: 16;
+ }
+ 
+ .mate-panel-menu-bar {
+   -PanelMenuBar-icon-visible: true;
+ }
+ 
+ .mate-panel-applet-slider {
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   border-radius: 13px;
+   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+   background-color: #FFFFFF;
+ }
+ 
+ .mate-panel-applet-slider frame > border {
+   border-style: none;
+ }
+ 
+ #PanelApplet:not(:selected) > box {
+   transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+ }
+ 
+ #PanelApplet:selected > box {
+   background-color: alpha(currentColor, 0.1);
+   color: white;
+ }
+ 
+ #mate-menu {
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   background-color: #FFFFFF;
+ }
+ 
+ #mate-menu button {
+   min-height: 24px;
+   min-width: 24px;
+   padding: 4px 0;
+   color: rgba(0, 0, 0, 0.87);
+   font-weight: normal;
+ }
+ 
+ #mate-menu button:not(.flat) {
+   background-color: alpha(currentColor, 0.1);
+ }
+ 
+ #mate-menu button image,
+ #mate-menu button label + label {
+   color: rgba(0, 0, 0, 0.6);
+ }
+ 
+ #mate-menu entry {
+   margin: 0 0 4px;
+ }
+ 
+ #mate-menu entry image {
+   margin: 0;
+ }
+ 
+ #mate-menu entry + button {
+   margin: 0 4px 4px;
+   padding: 6px;
+ }
+ 
+ .brisk-menu {
+   box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
+   background-color: #FFFFFF;
+ }
+ 
+ .brisk-menu entry {
+   margin-bottom: -2px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+   border-image: none;
+   box-shadow: none;
+   background-color: transparent;
+ }
+ 
+ .brisk-menu entry + box > box:dir(ltr) {
+   margin-right: -2px;
+   border-right: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .brisk-menu entry + box > box:dir(rtl) {
+   margin-left: -2px;
+   border-left: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .brisk-menu .categories-list {
+   padding-top: 4px;
+ }
+ 
+ .brisk-menu .categories-list button {
+   margin: 0 4px;
+ }
+ 
+ .brisk-menu .categories-list button:checked {
+   color: #1A73E8;
+ }
+ 
+ .brisk-menu .session-button {
+   padding: 12px;
+ }
+ 
+ .brisk-menu .frame {
+   border-style: none;
+ }
+ 
+ .brisk-menu .apps-list {
+   padding: 4px 0;
+   background-color: transparent;
+ }
+ 
+ .brisk-menu .apps-list row {
+   padding: 0;
+ }
+ 
+ .brisk-menu .apps-list row:hover {
+   box-shadow: none;
+ }
+ 
+ .brisk-menu .apps-list button {
+   border-radius: 0;
+   color: rgba(0, 0, 0, 0.87);
+   font-weight: normal;
+ }
+ 
+ /*********************
+  * CAJA File manager *
+  *********************/
+ .caja-navigation-window button.toggle.image-button {
+   border-radius: 12px;
+ }
+ 
+ .caja-pathbar button {
+   margin: 0 -1px 0 -2px;
+ }
+ 
+ .caja-pathbar button.slider-button {
+   min-width: 24px;
+ }
+ 
+ .caja-pathbar button > widget {
+   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+   -GtkArrow-arrow-scaling: 1;
+ }
+ 
+ .caja-side-pane notebook viewport.frame,
+ .caja-side-pane notebook widget .vertical {
+   background-color: #FFFFFF;
+ }
+ 
+ .caja-side-pane notebook,
+ .caja-notebook {
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .caja-side-pane notebook .frame,
+ .caja-notebook .frame {
+   border-style: none;
+ }
+ 
+ .caja-canvas-item {
+   border-radius: 12px;
+ }
+ 
+ .caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry,
+ .caja-navigation-window .view .entry,
+ .caja-navigation-window filechooser stack.view scrolledwindow treeview.view .entry,
+ filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry,
+ .caja-navigation-window window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .entry,
+ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .caja-navigation-window treeview.view:not(.progressbar):not(.trough) .entry {
+   border: none;
+   border-radius: 12px;
+   background-color: rgba(0, 0, 0, 0.04);
+   background-image: none;
+   color: rgba(0, 0, 0, 0.87);
+ }
+ 
+ .caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry:selected,
+ .caja-navigation-window .view .entry:selected,
+ .caja-navigation-window filechooser stack.view scrolledwindow treeview.view .entry:selected,
+ filechooser stack.view scrolledwindow .caja-navigation-window treeview.view .entry:selected,
+ .caja-navigation-window window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.view:not(.progressbar):not(.trough) .entry:selected,
+ window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow .caja-navigation-window treeview.view:not(.progressbar):not(.trough) .entry:selected {
+   background-color: alpha(currentColor, 0.06);
+ }
+ 
+ .caja-desktop.view .entry, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry {
+   background-color: rgba(0, 0, 0, 0.3);
+   color: white;
+   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
+   caret-color: currentColor;
+ }
+ 
+ .caja-desktop.view .entry:selected, filechooser stack.view scrolledwindow treeview.caja-desktop.view .entry:selected, window#gnome-system-monitor.background.csd > box.vertical > stack > box.vertical > scrolledwindow treeview.caja-desktop.view:not(.progressbar):not(.trough) .entry:selected {
+   background-color: alpha(currentColor, 0.06);
+ }
+ 
+ .caja-navigation-window statusbar {
+   margin: 0 -10px;
+   padding: 0 4px;
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .caja-notebook frame > border {
+   border-style: none;
+ }
+ 
+ #caja-extra-view-widget {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+   background-color: #FFFFFF;
+ }
+ 
+ #caja-extra-view-widget > box > box > label {
+   font-weight: bold;
+ }
+ 
+ /*********
+  * Pluma *
+  *********/
+ .pluma-window statusbar {
+   margin: 0 -10px;
+   padding: 0 4px;
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .pluma-window statusbar frame > border {
+   border-style: none;
+ }
+ 
+ .pluma-window statusbar frame button.flat {
+   padding: 0 4px;
+   border-radius: 0;
+ }
+ 
+ .pluma-window statusbar frame button.flat widget {
+   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+   -GtkArrow-arrow-scaling: 1;
+ }
+ 
+ .pluma-print-preview toolbar {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .pluma-window paned.horizontal box.vertical box.horizontal button.flat {
+   margin: 1px;
+ }
+ 
+ .pluma-window paned.horizontal box.vertical .frame {
+   border-style: none;
+ }
+ 
+ .pluma-window paned.horizontal box.vertical notebook.frame {
+   margin-top: -1px;
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ .pluma-window paned.horizontal box.vertical notebook.frame box.vertical toolbar.horizontal {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ /*********
+  * Atril *
+  *********/
+ .atril-window paned.horizontal box.vertical .frame {
+   border-style: none;
+ }
+ 
+ .atril-window paned.horizontal box.vertical notebook .frame {
+   border-top: 1px solid rgba(0, 0, 0, 0.12);
+ }
+ 
+ /* mate-screensaver lock dialog */
+ .lock-dialog {
+   border: 1px solid rgba(0, 0, 0, 0.08);
+   border-radius: 13px;
+   box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.2), 0 6px 6px 0 rgba(0, 0, 0, 0.14), 0 1px 10.8px 0 rgba(0, 0, 0, 0.12), inset 0 1px rgba(255, 255, 255, 0.4);
+   background-color: #FFFFFF;
+ }
+ 
+ .lock-dialog frame > border {
+   border-style: none;
+ }
+ 
+ .lock-dialog button:not(:disabled) {
+   color: #1A73E8;
+ }
+ 
+ /* multimedia OSD */
+ MsdOsdWindow.background.osd {
+   border-radius: 12px;
+   background-color: rgba(54, 54, 54, 0.9);
+   color: white;
+ }
+ 
+ MsdOsdWindow.background.osd .trough {
+   border-radius: 0;
+   background-color: rgba(255, 255, 255, 0.12);
+ }
+ 
+ MsdOsdWindow.background.osd .progressbar {
+   border-radius: 0;
+   background-color: #1A73E8;
+ }
 
 /******************
  * Budgie Desktop *
